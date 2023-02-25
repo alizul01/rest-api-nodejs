@@ -1,12 +1,5 @@
-import { createServer } from 'http'
+const app = require('./server')
 
-const server = createServer((req, res) => {
-    if (req.method === "GET" && req.url === "/") {
-        res.statusCode = 200
-        res.end()
-    }
-})
-
-server.listen(3001, () => {
-    console.log("Server listen on http://localhost:3001")
+app.listen(3001, () => {
+    console.log("Server run on http://localhost:3001")
 })
